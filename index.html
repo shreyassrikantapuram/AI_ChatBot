@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resource Management</title>
+    <style>
+        /* Basic Reset */
+        body, h1, h2, p, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #e0eafc, #cfdef3);
+            scroll-behavior: smooth;
+        }
+
+        /* Header styling */
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 10; /* Ensure the header stays on top */
+        }
+
+        /* Section styling */
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease-in;
+            position: relative; /* Ensure sections are properly stacked */
+            transition: transform 0.3s, box-shadow 0.3s; /* Hover effects */
+        }
+
+        /* Hover effect for sections */
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
+            z-index: 10; /* Ensure the footer stays on top */
+        }
+
+        /* Button styling */
+        .button {
+            display: inline-block;
+            padding: 8px 16px; /* Slightly smaller button */
+            font-size: 14px; /* Slightly smaller text */
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            margin-top: 20px; /* Spacing above button */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.03); /* Slightly smaller scale effect */
+            box-shadow: 0 6px 8px rgba(0,0,0,0.3);
+        }
+
+        /* Image styling */
+        .image-placeholder {
+            width: 85%; /* Increase width */
+            max-height: 350px; /* Reduce height slightly */
+            margin: 0 auto 15px auto; /* Center the image and add spacing below */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block; /* Ensures the image is centered */
+            object-fit: cover; /* Ensures the image maintains aspect ratio */
+        }
+
+        /* AOS animations */
+        [data-aos="fade-up"] {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s, transform 0.6s;
+        }
+
+        [data-aos="fade-up"].aos-animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Lists styling */
+        ul {
+            list-style: disc inside;
+            margin-top: 10px;
+        }
+    </style>
+    <script src="https://cdn.botpress.cloud/webchat/v2.1/inject.js"></script>
+    <script src="https://mediafiles.botpress.cloud/47d4a0b8-d010-4c7f-9902-0957cc4dfb19/webchat/v2.1/config.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init();
+        });
+
+        // Function to open the Botpress chatbot
+        function openChatbot() {
+            window.botpressWebChat.show(); // Show the chatbot
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>AI-Powered Resource Management</h1>
+    </header>
+    <section id="section1" data-aos="fade-up">
+        <img src="pic2.png" alt="AI Chatbot" class="image-placeholder">
+        <h2>AI-Powered Chatbot</h2>
+        <p><strong>Conversational Interface:</strong> An AI chatbot that interacts with users to understand the resources they have and their goals.</p>
+        <p><strong>Suggestion Engine:</strong> Provides ideas on how to transform and utilize resources efficiently. This could include:</p>
+        <ul>
+            <li><strong>Upcycling:</strong> Creative ways to repurpose or recycle materials.</li>
+            <li><strong>Optimization Techniques:</strong> Suggestions on how to improve energy efficiency or reduce waste.</li>
+            <li><strong>New Product Ideas:</strong> Innovative uses of existing resources to create new products or technologies.</li>
+        </ul>
+        <p><strong>Step-by-Step Guidance:</strong> Detailed steps to implement the suggested ideas, including required tools, processes, and potential outcomes.</p>
+        <button class="button" onclick="openChatbot()">Open AI Resource Management Chatbot</button>
+    </section>
+    <section id="section2" data-aos="fade-up">
+                <h2>Resource Library</h2>
+        <p>A database of different resources and materials, including their properties, uses, and best practices for optimization.</p>
+        <p>Integration with external databases or APIs for real-time data on resource availability, market trends, etc.</p>
+    </section>
+</body>
+</html>
